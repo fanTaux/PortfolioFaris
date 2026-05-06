@@ -71,3 +71,21 @@ filterBtns.forEach(btn => {
     });
   });
 });
+
+// --- Mobile Navigation ---
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('mobile-visible');
+  });
+
+  // Close menu when clicking a link
+  const links = navLinks.querySelectorAll('a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('mobile-visible');
+    });
+  });
+}

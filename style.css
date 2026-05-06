@@ -109,6 +109,14 @@ nav {
   color: var(--accent-cyan);
 }
 
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
 /* Buttons */
 .btn {
   text-decoration: none;
@@ -972,9 +980,12 @@ footer a:hover {
     padding: 1rem 1.5rem;
   }
 
+  .hamburger {
+    display: block;
+  }
+
   .nav-links {
     display: none;
-    /* In a real app, you'd add a hamburger menu */
   }
 
   .nav-links.mobile-visible {
@@ -987,19 +998,25 @@ footer a:hover {
     background: var(--bg-surface);
     padding: 2rem;
     border-bottom: 1px solid var(--border-color);
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  #hero {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  #work, #about, #contact {
+    padding: 5rem 1.5rem;
   }
 
   h1.hero-name {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 10vw, 4rem);
   }
-
-  .crosshair-wrap {
-    width: 240px;
-    height: 240px;
-  }
-
-  .cs-badge {
-    font-size: 2.5rem;
+  
+  .about-skills-logos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .projects-grid {
